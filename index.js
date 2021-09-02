@@ -16,7 +16,7 @@ const searchBook = () =>{
         toggleSpinner('none');
     }else{
     // Load Data
-    const url = `http://openlibrary.org/search.json?q=${searchText}`
+    const url = `https://openlibrary.org/search.json?q=${searchText}`
     fetch(url)
     .then(response => response.json())
     .then(datas => showBookResult(datas.docs ,datas.docs.length));
